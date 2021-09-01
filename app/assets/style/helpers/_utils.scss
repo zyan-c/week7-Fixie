@@ -1,3 +1,5 @@
+//在all.scss加入 @import "utilities/api"; 就可以成功產生新的通用類別
+//key 的名稱改成跟 BS5 _utilities 的名稱不一樣之後才能成功編譯！結論：key 名稱不可重複（why？）
 $utilities: () !default;
     $utilities: map-merge(
     (
@@ -7,47 +9,44 @@ $utilities: () !default;
             property: font-size,
             class: fz,
             values:(
-              3-half: $fz-3-half,   //14px
+              3-half: $fz-3-half,  //14px
               4: $fz-4,            //16px
               5: $fz-5,            //20px
               6: $fz-6,            //24px
+              10: $fz-10,          //40px
               12: $fz-12,          //48px
               18: $fz-18,          //72px
               24: $fz-24,          //96px
             //   待優化寫成一行 $font-sizes
             ),
         ),
-        "line-height": (
-        property: line-height,
-        class: lh,
-        values: (
-            1: 1,
-            "md": 1.33333,
-            sm: $line-height-sm,
-            base: $line-height-base,
-            lg: $line-height-lg,
-            ),
+        "line-heights": (
+            property: line-height,
+            class: lh,
+            values: (
+                1: 1,
+                "md": 1.33333,
+                sm: $line-height-sm,
+                base: $line-height-base,
+                lg: $line-height-lg,
+                ),
         ),
-        "font-weight": (
-        property: font-weight,
-        class: fw,
-        values: (
-            light: $font-weight-light,
-            lighter: $font-weight-lighter,
-            normal: $font-weight-normal,
-            bold: $font-weight-bold,
-            bolder: $font-weight-bolder,
-            black: $font-weight-black,
-            )
+        "font-weights": (
+            property: font-weight,
+            class: fw,
+            values: (
+                light: $font-weight-light,
+                lighter: $font-weight-lighter,
+                normal: $font-weight-normal,
+                bold: $font-weight-bold,
+                bolder: $font-weight-bolder,
+                black: $font-weight-black,
+                )
         ),
-        "font-family": (
-        property: font-family,
-        class: f,
-        values: (
-            lato
-            merriweather
-            roboto
-            )
+        "font-families": (
+            property: font-family,
+            class: f,
+            values: lato merriweather roboto
         )
     ),
     $utilities
