@@ -1,0 +1,12 @@
+.hero-bg{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week7/img1.jpg');
+    background-position: center center;
+    background-size: cover;
+    min-height: calc(100vh - 75px - 104px);
+}
+.function-bg{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week7/img2.jpg');
+    background-position: center center;
+    background-size: cover;
+    min-height: calc(100vh);
+}
